@@ -1,0 +1,14 @@
+@namespace("de.chuck.ais")
+protocol Ais {
+    record AisMessage {
+        timestamp_ms timestamp;
+        string mmsi;
+
+        union{null, float} lon = null;        
+        union{null, float} lat = null;
+        union{null, float} sog = null;
+        union{null, float} cog = null;
+        union{null, float} hdg = null;
+    }
+
+}
